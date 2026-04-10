@@ -7,7 +7,7 @@
 
 <!-- Parent MikroTik decoder -->
 <decoder name="mikrotik">
-  <program_name>mikrotik</program_name>
+  <prematch>mikrotik</prematch>
 </decoder>
 
 <!-- Alternative: Match by syslog tag prefix -->
