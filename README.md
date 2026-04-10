@@ -72,20 +72,20 @@ sudo systemctl restart wazuh-manager
 /system logging action add name=wazuh target=remote remote=YOUR_WAZUH_SERVER_IP remote-port=514
 
 # Configure logging rules (add topics as needed)
-/system logging add topics=firewall action=wazuh
-/system logging add topics=system action=wazuh
-/system logging add topics=error action=wazuh
-/system logging add topics=critical action=wazuh
-/system logging add topics=account action=wazuh
-/system logging add topics=interface action=wazuh
-/system logging add topics=ppp action=wazuh
-/system logging add topics=wireguard action=wazuh
-/system logging add topics=hotspot action=wazuh
+/system logging add topics=firewall action=wazuh prefix=mikrotik
+/system logging add topics=system action=wazuh prefix=mikrotik
+/system logging add topics=error action=wazuh prefix=mikrotik
+/system logging add topics=critical action=wazuh prefix=mikrotik
+/system logging add topics=account action=wazuh prefix=mikrotik
+/system logging add topics=interface action=wazuh prefix=mikrotik
+/system logging add topics=ppp action=wazuh prefix=mikrotik
+/system logging add topics=wireguard action=wazuh prefix=mikrotik
+/system logging add topics=hotspot action=wazuh prefix=mikrotik
 
 # For VPN monitoring
-/system logging add topics=l2tp action=wazuh
-/system logging add topics=ovpn action=wazuh
-/system logging add topics=ipsec action=wazuh
+/system logging add topics=l2tp action=wazuh prefix=mikrotik
+/system logging add topics=ovpn action=wazuh prefix=mikrotik
+/system logging add topics=ipsec action=wazuh prefix=mikrotik
 ```
 
 ### Recommended Topics to Monitor
